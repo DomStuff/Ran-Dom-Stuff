@@ -95,7 +95,7 @@ public class TortoiseEntity extends RanDomThingsModElements.ModElement {
 			return new MobRenderer(renderManager, new Modelcustom_model(), 0.6f) {
 				@Override
 				public ResourceLocation getEntityTexture(Entity entity) {
-					return new ResourceLocation("ran_dom_things:textures/turtle.png");
+					return new ResourceLocation("ran_dom_things:textures/tortoise.png");
 				}
 			};
 		});
