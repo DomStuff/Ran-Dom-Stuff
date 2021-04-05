@@ -5,7 +5,7 @@
     "mobName": "Tortoise",
     "mobLabel": "",
     "mobModelName": "Modelcustom_model",
-    "mobModelTexture": "turtle.png",
+    "mobModelTexture": "tortoise.png",
     "mobModelGlowTexture": "",
     "modelWidth": 0.6,
     "modelHeight": 0.6,
