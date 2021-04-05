@@ -5,7 +5,7 @@
       "name": "Tortoise",
       "type": "mob",
       "sortid": 1,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "ids": {},
       "registry_name": "tortoise"
