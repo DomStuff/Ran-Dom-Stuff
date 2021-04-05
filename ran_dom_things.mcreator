@@ -1,23 +1,10 @@
 {
   "id_map": {},
-  "mod_elements": [
-    {
-      "name": "Tortoise",
-      "type": "mob",
-      "sortid": 1,
-      "compiles": false,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "tortoise"
-    }
-  ],
+  "mod_elements": [],
   "variable_elements": [],
   "sound_elements": [],
   "language_map": {
-    "en_us": {
-      "item.ran_dom_things.tortoise_spawn_egg": "Tortoise Spawn Egg",
-      "entity.ran_dom_things.tortoise": "Tortoise"
-    }
+    "en_us": {}
   },
   "workspaceSettings": {
     "modid": "ran_dom_things",
