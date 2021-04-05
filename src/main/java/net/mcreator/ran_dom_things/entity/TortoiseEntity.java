@@ -32,6 +32,7 @@ import net.minecraft.entity.passive.TameableEntity;
 import net.minecraft.entity.ai.goal.WaterAvoidingRandomWalkingGoal;
 import net.minecraft.entity.ai.goal.TemptGoal;
 import net.minecraft.entity.ai.goal.LookRandomlyGoal;
+import net.minecraft.entity.ai.goal.BreedGoal;
 import net.minecraft.entity.SpawnReason;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ILivingEntityData;
@@ -120,7 +121,8 @@ public class TortoiseEntity extends RanDomThingsModElements.ModElement {
 			super.registerGoals();
 			this.goalSelector.addGoal(1, new TemptGoal(this, 0.3, Ingredient.fromItems(new ItemStack(Blocks.DANDELION, (int) (1)).getItem()), false));
 			this.goalSelector.addGoal(2, new WaterAvoidingRandomWalkingGoal(this, 0.3));
-			this.goalSelector.addGoal(3, new LookRandomlyGoal(this));
+			this.goalSelector.addGoal(3, new BreedGoal(this, 1));
+			this.goalSelector.addGoal(4, new LookRandomlyGoal(this));
 		}
 
 		@Override
