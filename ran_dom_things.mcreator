@@ -6,6 +6,23 @@
   "language_map": {
     "en_us": {}
   },
+  "foldersRoot": {
+    "name": "~",
+    "children": [
+      {
+        "name": "Dom",
+        "children": []
+      },
+      {
+        "name": "Shared stuff",
+        "children": []
+      },
+      {
+        "name": "Toby",
+        "children": []
+      }
+    ]
+  },
   "workspaceSettings": {
     "modid": "ran_dom_things",
     "modName": "Ran-Dom Things",
@@ -22,5 +39,5 @@
     "modElementsPackage": "net.mcreator.ran_dom_things",
     "lockBaseModFiles": false
   },
-  "mcreatorVersion": 202000547520
+  "mcreatorVersion": 202100116710
 }
