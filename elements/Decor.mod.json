@@ -1,0 +1,11 @@
+{
+  "_fv": 18,
+  "_type": "tab",
+  "definition": {
+    "name": "Decor",
+    "icon": {
+      "value": "Blocks.POTTED_CACTUS"
+    },
+    "showSearch": false
+  }
+}
