@@ -12,14 +12,20 @@ import net.minecraft.util.math.shapes.VoxelShapes;
 import net.minecraft.util.math.shapes.VoxelShape;
 import net.minecraft.util.math.shapes.ISelectionContext;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.Rotation;
+import net.minecraft.util.Direction;
+import net.minecraft.state.StateContainer;
+import net.minecraft.state.DirectionProperty;
 import net.minecraft.loot.LootContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
+import net.minecraft.item.BlockItemUseContext;
 import net.minecraft.item.BlockItem;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.SoundType;
+import net.minecraft.block.DirectionalBlock;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
@@ -49,9 +55,11 @@ public class PebblesBlock extends RanDomThingsModElements.ModElement {
 		RenderTypeLookup.setRenderLayer(block, RenderType.getCutout());
 	}
 	public static class CustomBlock extends Block {
+		public static final DirectionProperty FACING = DirectionalBlock.FACING;
 		public CustomBlock() {
 			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(1f, 10f).setLightLevel(s -> 0).notSolid()
 					.setOpaque((bs, br, bp) -> false));
+			this.setDefaultState(this.stateContainer.getBaseState().with(FACING, Direction.SOUTH));
 			setRegistryName("pebbles");
 		}
 
@@ -63,7 +71,47 @@ public class PebblesBlock extends RanDomThingsModElements.ModElement {
 		@Override
 		public VoxelShape getShape(BlockState state, IBlockReader world, BlockPos pos, ISelectionContext context) {
 			Vector3d offset = state.getOffset(world, pos);
-			return VoxelShapes.or(makeCuboidShape(0, 0, 0, 16, 4, 16)).withOffset(offset.x, offset.y, offset.z);
+			switch ((Direction) state.get(FACING)) {
+				case SOUTH :
+				case NORTH :
+				default :
+					return VoxelShapes.or(makeCuboidShape(0, 0, 0, 16, 4, 16)).withOffset(offset.x, offset.y, offset.z);
+				case EAST :
+				case WEST :
+					return VoxelShapes.or(makeCuboidShape(0, 16, 0, 16, 0, 4)).withOffset(offset.x, offset.y, offset.z);
+				case UP :
+				case DOWN :
+					return VoxelShapes.or(makeCuboidShape(0, 16, 16, 4, 0, 0)).withOffset(offset.x, offset.y, offset.z);
+			}
+		}
+
+		@Override
+		protected void fillStateContainer(StateContainer.Builder<Block, BlockState> builder) {
+			builder.add(FACING);
+		}
+
+		@Override
+		public BlockState rotate(BlockState state, Rotation rot) {
+			if (rot == Rotation.CLOCKWISE_90 || rot == Rotation.COUNTERCLOCKWISE_90) {
+				if ((Direction) state.get(FACING) == Direction.WEST || (Direction) state.get(FACING) == Direction.EAST) {
+					return state.with(FACING, Direction.UP);
+				} else if ((Direction) state.get(FACING) == Direction.UP || (Direction) state.get(FACING) == Direction.DOWN) {
+					return state.with(FACING, Direction.WEST);
+				}
+			}
+			return state;
+		}
+
+		@Override
+		public BlockState getStateForPlacement(BlockItemUseContext context) {
+			Direction facing = context.getFace();
+			if (facing == Direction.WEST || facing == Direction.EAST)
+				facing = Direction.UP;
+			else if (facing == Direction.NORTH || facing == Direction.SOUTH)
+				facing = Direction.EAST;
+			else
+				facing = Direction.SOUTH;;
+			return this.getDefaultState().with(FACING, facing);
 		}
 
 		@Override

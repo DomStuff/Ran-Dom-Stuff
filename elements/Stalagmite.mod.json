@@ -9,10 +9,10 @@
     "textureRight": "",
     "textureBack": "",
     "renderType": 2,
-    "customModelName": "pebbles:default",
-    "rotationMode": 5,
+    "customModelName": "stalagmite:default",
+    "rotationMode": 1,
     "emissiveRendering": false,
-    "displayFluidOverlay": false,
+    "displayFluidOverlay": true,
     "itemTexture": "",
     "particleTexture": "",
     "tintType": "No tint",
@@ -27,21 +27,21 @@
         "my": 0.0,
         "mz": 0.0,
         "Mx": 16.0,
-        "My": 4.0,
+        "My": 24.0,
         "Mz": 16.0,
         "subtract": false
       }
     ],
-    "name": "Pebbles",
+    "name": "Stalagmite",
     "specialInfo": [],
     "hardness": 1.0,
     "resistance": 10.0,
     "hasGravity": false,
-    "isWaterloggable": false,
+    "isWaterloggable": true,
     "creativeTab": {
       "value": "CUSTOM:Decor"
     },
-    "destroyTool": "Not specified",
+    "destroyTool": "pickaxe",
     "customDrop": {
       "value": ""
     },

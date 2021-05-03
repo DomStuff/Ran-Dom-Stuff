@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "ran_dom_things:block/stalagmite"
+    },
+    "facing=east": {
+      "model": "ran_dom_things:block/stalagmite",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "ran_dom_things:block/stalagmite",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "ran_dom_things:block/stalagmite",
+      "y": 270
+    }
+  }
+}

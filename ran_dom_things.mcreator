@@ -20,12 +20,23 @@
       "ids": {},
       "registry_name": "pebbles",
       "path": "~/Toby"
+    },
+    {
+      "name": "Stalagmite",
+      "type": "block",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "stalagmite",
+      "path": "~/Toby"
     }
   ],
   "variable_elements": [],
   "sound_elements": [],
   "language_map": {
     "en_us": {
+      "block.ran_dom_things.stalagmite": "Stalagmite",
       "itemGroup.tabdecor": "Decor",
       "block.ran_dom_things.pebbles": "Pebbles"
     }

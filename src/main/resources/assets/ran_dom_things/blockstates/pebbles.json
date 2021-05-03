@@ -1,7 +1,28 @@
 {
   "variants": {
-    "": {
+    "facing=south": {
       "model": "ran_dom_things:block/pebbles"
+    },
+    "facing=north": {
+      "model": "ran_dom_things:block/pebbles"
+    },
+    "facing=east": {
+      "model": "ran_dom_things:block/pebbles",
+      "x": 90
+    },
+    "facing=west": {
+      "model": "ran_dom_things:block/pebbles",
+      "x": 90
+    },
+    "facing=up": {
+      "model": "ran_dom_things:block/pebbles",
+      "x": 90,
+      "y": 90
+    },
+    "facing=down": {
+      "model": "ran_dom_things:block/pebbles",
+      "x": 90,
+      "y": 90
     }
   }
 }
