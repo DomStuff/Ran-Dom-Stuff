@@ -1,10 +1,45 @@
 {
   "id_map": {},
-  "mod_elements": [],
+  "mod_elements": [
+    {
+      "name": "TotemOfWarmth",
+      "type": "item",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "totem_of_warmth",
+      "path": "~/Dom"
+    },
+    {
+      "name": "TotemWarmthTick",
+      "type": "procedure",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "totem_warmth_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/Dom"
+    }
+  ],
   "variable_elements": [],
   "sound_elements": [],
   "language_map": {
-    "en_us": {}
+    "en_us": {
+      "item.ran_dom_things.totem_of_warmth": "Totem of Warmth"
+    }
   },
   "foldersRoot": {
     "name": "~",
@@ -20,6 +55,19 @@
       {
         "name": "Toby",
         "children": []
+      },
+      {
+        "name": "Code Comps",
+        "children": [
+          {
+            "name": "Dom",
+            "children": []
+          },
+          {
+            "name": "Toby",
+            "children": []
+          }
+        ]
       }
     ]
   },
