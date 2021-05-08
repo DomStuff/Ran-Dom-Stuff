@@ -1,0 +1,8 @@
+{
+  "parent": "ran_dom_things:custom/pebbles",
+  "textures": {
+    "all": "ran_dom_things:blocks/stone",
+    "particle": "ran_dom_things:blocks/stone",
+    "0": "ran_dom_things:blocks/stone"
+  }
+}

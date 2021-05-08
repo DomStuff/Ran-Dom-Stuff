@@ -2,16 +2,6 @@
   "id_map": {},
   "mod_elements": [
     {
-      "name": "TotemOfWarmth",
-      "type": "item",
-      "sortid": 1,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "totem_of_warmth",
-      "path": "~/Dom"
-    },
-    {
       "name": "TotemWarmthTick",
       "type": "procedure",
       "sortid": 2,
@@ -32,28 +22,62 @@
         ]
       },
       "path": "~/Dom"
+    },
+    {
+      "name": "TotemOfWarmth",
+      "type": "item",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "totem_of_warmth",
+      "path": "~/Dom"
+    },
+    {
+      "name": "Stalagmite",
+      "type": "block",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "stalagmite",
+      "path": "~/Toby"
+    },
+    {
+      "name": "Decor",
+      "type": "tab",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "decor",
+      "path": "~/Toby"
+    },
+    {
+      "name": "Pebbles",
+      "type": "block",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "pebbles",
+      "path": "~/Toby"
     }
   ],
   "variable_elements": [],
   "sound_elements": [],
   "language_map": {
-    "en_us": {
-      "item.ran_dom_things.totem_of_warmth": "Totem of Warmth"
-    }
+    "en_us": {}
   },
   "foldersRoot": {
     "name": "~",
     "children": [
       {
-        "name": "Dom",
-        "children": []
-      },
-      {
-        "name": "Shared stuff",
-        "children": []
-      },
-      {
         "name": "Toby",
+        "children": []
+      },
+      {
+        "name": "Dom",
         "children": []
       },
       {
@@ -68,6 +92,10 @@
             "children": []
           }
         ]
+      },
+      {
+        "name": "Shared stuff",
+        "children": []
       }
     ]
   },
