@@ -62,12 +62,28 @@
       "ids": {},
       "registry_name": "pebbles",
       "path": "~/Toby"
+    },
+    {
+      "name": "Barriel",
+      "type": "block",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "barriel",
+      "path": "~/Code Comps/Toby"
     }
   ],
   "variable_elements": [],
   "sound_elements": [],
   "language_map": {
-    "en_us": {}
+    "en_us": {
+      "block.ran_dom_things.barriel": "Barriel",
+      "item.ran_dom_things.totem_of_warmth": "Totem of Warmth",
+      "block.ran_dom_things.stalagmite": "Stalagmite",
+      "itemGroup.tabdecor": "Decor",
+      "block.ran_dom_things.pebbles": "Pebbles"
+    }
   },
   "foldersRoot": {
     "name": "~",

@@ -1,1 +1,7 @@
-{}
+{
+  "block.ran_dom_things.barriel": "Barriel",
+  "item.ran_dom_things.totem_of_warmth": "Totem of Warmth",
+  "block.ran_dom_things.stalagmite": "Stalagmite",
+  "itemGroup.tabdecor": "Decor",
+  "block.ran_dom_things.pebbles": "Pebbles"
+}

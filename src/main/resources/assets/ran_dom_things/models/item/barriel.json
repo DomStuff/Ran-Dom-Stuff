@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "ran_dom_things:blocks/barrel_side"
+  }
+}

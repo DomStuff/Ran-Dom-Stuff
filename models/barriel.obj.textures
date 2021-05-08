@@ -1,0 +1,13 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "m_3": "barrel_side",
+        "m_2": "barrel_top",
+        "m_1": "barrel_bottom",
+        "m_0": "netherite_block"
+      },
+      "name": "default"
+    }
+  }
+}
